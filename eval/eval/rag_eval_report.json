@@ -1,0 +1,3342 @@
+{
+  "baseUrl": "http://localhost:8080",
+  "departmentId": "eval",
+  "moduleCode": "policy",
+  "topK": 5,
+  "startedAtEpochSeconds": 1781875696,
+  "uploads": [],
+  "results": [
+    {
+      "id": "q001",
+      "question": "年假需要提前多久申请？",
+      "answerable": true,
+      "expectedAnswer": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。",
+      "expectedEvidence": [
+        "年假需要至少提前三个工作日提交申请"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "年假需要至少提前三个工作日提交申请"
+        ],
+        "hits": [
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8784351675432237
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.7086082285646805
+          },
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5901123266242534
+          },
+          {
+            "content": "迟到超过三十分钟且未提前报备的，按半天事假处理。因公共交通大面积延误导致迟到的，可提交官方延误证明申请豁免。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5435548855027268
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.30050858816880405
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "年假需要至少提前三个工作日提交申请"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【员工考勤与请假制度.txt】，员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+        "sources": [
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8789376346986802
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.7675649776446877
+          },
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5624890080533193
+          }
+        ]
+      }
+    },
+    {
+      "id": "q002",
+      "question": "连续年假超过五个工作日还需要谁复核？",
+      "answerable": true,
+      "expectedAnswer": "连续年假超过五个工作日的，还需要部门负责人复核。",
+      "expectedEvidence": [
+        "连续年假超过五个工作日",
+        "部门负责人复核"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "连续年假超过五个工作日",
+          "部门负责人复核"
+        ],
+        "hits": [
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8710009318021132
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5488956617671191
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.23345158364841714
+          },
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.17322525827155974
+          },
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.16787709834508596
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [
+          "连续年假超过五个工作日"
+        ],
+        "missingEvidence": [
+          "部门负责人复核"
+        ],
+        "answer": "根据【员工考勤与请假制度】，连续年假超过五个工作日的，还需要**部门负责人**复核。",
+        "sources": [
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8910438578751876
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6010514928105514
+          }
+        ]
+      }
+    },
+    {
+      "id": "q003",
+      "question": "病假证明最晚什么时候提交？",
+      "answerable": true,
+      "expectedAnswer": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。",
+      "expectedEvidence": [
+        "返岗后三个工作日内提交医院诊断证明"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "返岗后三个工作日内提交医院诊断证明"
+        ],
+        "hits": [
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.7799015836637528
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5259000655941626
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.26855563052591636
+          },
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2542369605056966
+          },
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.24686383874761628
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [
+          "返岗后三个工作日内提交医院诊断证明"
+        ],
+        "answer": "根据知识库资料，病假证明最晚需要在**返岗后三个工作日内**提交。",
+        "sources": [
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8011678056638749
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5863019125740521
+          }
+        ]
+      }
+    },
+    {
+      "id": "q004",
+      "question": "差旅住宿费报销需要哪些材料？",
+      "answerable": true,
+      "expectedAnswer": "需要提供酒店发票、入住水单和出差审批单。",
+      "expectedEvidence": [
+        "酒店发票",
+        "入住水单",
+        "出差审批单"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "酒店发票",
+          "入住水单",
+          "出差审批单"
+        ],
+        "hits": [
+          {
+            "content": "差旅住宿费报销需要提供酒店发票、入住水单和出差审批单。缺少出差审批单的，财务可以退回报销申请。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8437138486930732
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.28627027107186886
+          },
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.17710368013072417
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.1757260457087564
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.15181956886079115
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "酒店发票",
+          "入住水单",
+          "出差审批单"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】，差旅住宿费报销需要提供以下材料：\n\n1.酒店发票\n2.入住水单\n3.出差审批单\n\n注意：缺少出差审批单的，财务可以退回报销申请。",
+        "sources": [
+          {
+            "content": "差旅住宿费报销需要提供酒店发票、入住水单和出差审批单。缺少出差审批单的，财务可以退回报销申请。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8454408336707954
+          }
+        ]
+      }
+    },
+    {
+      "id": "q005",
+      "question": "市内交通费超过多少钱需要说明事由？",
+      "answerable": true,
+      "expectedAnswer": "市内交通费单次超过二百元的，需要说明事由并上传行程凭证。",
+      "expectedEvidence": [
+        "单次超过二百元",
+        "说明事由",
+        "上传行程凭证"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "单次超过二百元",
+          "说明事由",
+          "上传行程凭证"
+        ],
+        "hits": [
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8523132698457749
+          },
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6386119704014699
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5969093088231794
+          },
+          {
+            "content": "差旅住宿费报销需要提供酒店发票、入住水单和出差审批单。缺少出差审批单的，财务可以退回报销申请。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5008516568319585
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.20315308574408847
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [
+          "说明事由",
+          "上传行程凭证"
+        ],
+        "missingEvidence": [
+          "单次超过二百元"
+        ],
+        "answer": "市内交通费单次超过**二百元**的需要在报销单中说明事由，并上传行程凭证。",
+        "sources": [
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8523132698457749
+          },
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6465655969967735
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.6091194599680729
+          },
+          {
+            "content": "差旅住宿费报销需要提供酒店发票、入住水单和出差审批单。缺少出差审批单的，财务可以退回报销申请。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.48856389918473014
+          }
+        ]
+      }
+    },
+    {
+      "id": "q006",
+      "question": "普通上下班通勤能报销吗？",
+      "answerable": true,
+      "expectedAnswer": "不能，普通通勤费用不属于报销范围。",
+      "expectedEvidence": [
+        "普通通勤费用不属于报销范围"
+      ],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 0.5,
+        "matchedRank": 2,
+        "matchedEvidence": [
+          "普通通勤费用不属于报销范围"
+        ],
+        "hits": [
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8529999317226431
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8243384729978438
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.1996430643872773
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.17824564760819997
+          },
+          {
+            "content": "迟到超过三十分钟且未提前报备的，按半天事假处理。因公共交通大面积延误导致迟到的，可提交官方延误证明申请豁免。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.17402273909920946
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "普通通勤费用不属于报销范围"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】《费用报销制度.txt》中的规定：“普通通勤费用不属于报销范围。”因此，普通上下班通勤不能报销。",
+        "sources": [
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8531717984598192
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8127728534537773
+          }
+        ]
+      }
+    },
+    {
+      "id": "q007",
+      "question": "员工可以用个人网盘发送公司敏感资料吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。",
+      "expectedEvidence": [
+        "不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料"
+        ],
+        "hits": [
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8774680273454698
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.516660964293351
+          },
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5165485554968617
+          },
+          {
+            "content": "错误操作案例：员工在公共电脑上保存VPN密码，离开后未退出登录。该案例用于说明远程办公不得在公共电脑保存公司账号和业务资料。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.503822965609337
+          },
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.19986158398790427
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [
+          "不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料"
+        ],
+        "answer": "根据【知识库资料】中的《信息安全管理规范》，员工不得通过个人网盘外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+        "sources": [
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8774680273454698
+          },
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5743061167289204
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.5490482510173749
+          },
+          {
+            "content": "错误操作案例：员工在公共电脑上保存VPN密码，离开后未退出登录。该案例用于说明远程办公不得在公共电脑保存公司账号和业务资料。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5401749396395645
+          }
+        ]
+      }
+    },
+    {
+      "id": "q008",
+      "question": "生产系统账号可以多人共用吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，生产系统账号必须实名申请，禁止多人共用同一账号。",
+      "expectedEvidence": [
+        "生产系统账号必须实名申请",
+        "禁止多人共用同一账号"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "生产系统账号必须实名申请",
+          "禁止多人共用同一账号"
+        ],
+        "hits": [
+          {
+            "content": "生产系统账号必须实名申请，禁止多人共用同一账号。账号权限应遵循最小权限原则，离职或岗位变更时应及时回收。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8441545512231272
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7147306169267253
+          },
+          {
+            "content": "错误操作案例：员工将管理员动态口令截图发送到群聊，导致账号存在被冒用风险。该案例用于说明禁止共享验证码和动态口令。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.1912117120592127
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.1769948289865241
+          },
+          {
+            "content": "紧急故障是指影响生产系统、客户交付或整个部门办公的故障。紧急故障可以电话联系IT值班人员，同时仍需在IT服务台补充工单记录。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.1655209312262621
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "生产系统账号必须实名申请",
+          "禁止多人共用同一账号"
+        ],
+        "missingEvidence": [],
+        "answer": "根据知识库资料，生产系统账号必须实名申请，禁止多人共用同一账号。",
+        "sources": [
+          {
+            "content": "生产系统账号必须实名申请，禁止多人共用同一账号。账号权限应遵循最小权限原则，离职或岗位变更时应及时回收。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8554071034940165
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.6846603493335082
+          }
+        ]
+      }
+    },
+    {
+      "id": "q009",
+      "question": "导出客户数据需要记录哪些信息？",
+      "answerable": true,
+      "expectedAnswer": "需要记录导出目的、字段范围、接收人和保留期限。",
+      "expectedEvidence": [
+        "导出目的",
+        "字段范围",
+        "接收人",
+        "保留期限"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "导出目的",
+          "字段范围",
+          "接收人",
+          "保留期限"
+        ],
+        "hits": [
+          {
+            "content": "涉及客户数据的导出操作需要经过数据负责人审批，并记录导出目的、字段范围、接收人和保留期限。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8379608979828185
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.8119323472231903
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2927560208907925
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.22517286544906984
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.22028693351079587
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "导出目的",
+          "字段范围",
+          "接收人",
+          "保留期限"
+        ],
+        "missingEvidence": [],
+        "answer": "导出客户数据需要记录以下信息：导出目的、字段范围、接收人和保留期限。",
+        "sources": [
+          {
+            "content": "涉及客户数据的导出操作需要经过数据负责人审批，并记录导出目的、字段范围、接收人和保留期限。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8583294740326232
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.7335666841361957
+          }
+        ]
+      }
+    },
+    {
+      "id": "q010",
+      "question": "公司是否报销员工宠物医疗费？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.34323770491803274
+          },
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.28819528355380414
+          },
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.23531619703136986
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.2217066351947788
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.21657710450143622
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": []
+      }
+    },
+    {
+      "id": "q011",
+      "question": "员工婚假有多少天？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.39145199063231845
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.3291870619680177
+          },
+          {
+            "content": "迟到超过三十分钟且未提前报备的，按半天事假处理。因公共交通大面积延误导致迟到的，可提交官方延误证明申请豁免。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.27775421638963466
+          },
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.25565159590089687
+          },
+          {
+            "content": "当知识库回答没有找到明确依据时，用户应联系对应制度负责人或系统管理员确认，不应自行编造流程。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.25244008500249787
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": [
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5425816160347926
+          }
+        ]
+      }
+    },
+    {
+      "id": "q012",
+      "question": "客户数据可以永久保存吗？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.8149013703874967
+          },
+          {
+            "content": "涉及客户数据的导出操作需要经过数据负责人审批，并记录导出目的、字段范围、接收人和保留期限。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.6235201721074346
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.21764361604117508
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.19021036115964166
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.18453955454737558
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": [
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.8149013703874967
+          },
+          {
+            "content": "涉及客户数据的导出操作需要经过数据负责人审批，并记录导出目的、字段范围、接收人和保留期限。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.6685561210549826
+          }
+        ]
+      }
+    },
+    {
+      "id": "q013",
+      "question": "电脑或网络故障应该在哪里提交工单？",
+      "answerable": true,
+      "expectedAnswer": "应在IT服务台提交工单，并填写故障现象、影响范围、联系方式和期望处理时间。",
+      "expectedEvidence": [
+        "IT服务台提交工单",
+        "故障现象",
+        "影响范围",
+        "联系方式",
+        "期望处理时间"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "IT服务台提交工单",
+          "故障现象",
+          "影响范围",
+          "联系方式",
+          "期望处理时间"
+        ],
+        "hits": [
+          {
+            "content": "员工遇到电脑、网络、打印机或办公软件故障时，应在IT服务台提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8673950952724216
+          },
+          {
+            "content": "紧急故障是指影响生产系统、客户交付或整个部门办公的故障。紧急故障可以电话联系IT值班人员，同时仍需在IT服务台补充工单记录。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6301417050335338
+          },
+          {
+            "content": "员工遗忘统一身份平台密码时，应通过统一身份平台的找回密码功能重置。无法自助重置的，可以提交IT服务台工单并完成人员身份核验。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.17862545221737294
+          },
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.17586796981559838
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.1733340264362024
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [
+          "故障现象",
+          "影响范围",
+          "联系方式",
+          "期望处理时间"
+        ],
+        "missingEvidence": [
+          "IT服务台提交工单"
+        ],
+        "answer": "员工遇到电脑或网络故障时，应在**IT服务台**提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+        "sources": [
+          {
+            "content": "员工遇到电脑、网络、打印机或办公软件故障时，应在IT服务台提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8440241438583134
+          },
+          {
+            "content": "紧急故障是指影响生产系统、客户交付或整个部门办公的故障。紧急故障可以电话联系IT值班人员，同时仍需在IT服务台补充工单记录。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6500850737272734
+          }
+        ]
+      }
+    },
+    {
+      "id": "q014",
+      "question": "紧急故障可以只打电话不提交工单吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以。紧急故障可以电话联系IT值班人员，但仍需在IT服务台补充工单记录。",
+      "expectedEvidence": [
+        "可以电话联系IT值班人员",
+        "仍需在IT服务台补充工单记录"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "可以电话联系IT值班人员",
+          "仍需在IT服务台补充工单记录"
+        ],
+        "hits": [
+          {
+            "content": "紧急故障是指影响生产系统、客户交付或整个部门办公的故障。紧急故障可以电话联系IT值班人员，同时仍需在IT服务台补充工单记录。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8104080872457536
+          },
+          {
+            "content": "员工遇到电脑、网络、打印机或办公软件故障时，应在IT服务台提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.665192292634563
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.1787171940004639
+          },
+          {
+            "content": "错误操作案例：员工在公共电脑上保存VPN密码，离开后未退出登录。该案例用于说明远程办公不得在公共电脑保存公司账号和业务资料。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.16533762502473273
+          },
+          {
+            "content": "采购到货后，申请人应在三个工作日内完成验收确认。验收不通过的，应在采购系统中填写不通过原因并联系供应商处理。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.16506592789918165
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "可以电话联系IT值班人员",
+          "仍需在IT服务台补充工单记录"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】，紧急故障可以电话联系IT值班人员，但**同时仍需在IT服务台补充工单记录**。因此，不能只打电话不提交工单。",
+        "sources": [
+          {
+            "content": "紧急故障是指影响生产系统、客户交付或整个部门办公的故障。紧急故障可以电话联系IT值班人员，同时仍需在IT服务台补充工单记录。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8104080872457536
+          },
+          {
+            "content": "员工遇到电脑、网络、打印机或办公软件故障时，应在IT服务台提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6921661217288272
+          }
+        ]
+      }
+    },
+    {
+      "id": "q015",
+      "question": "统一身份平台初始密码有什么修改要求？",
+      "answerable": true,
+      "expectedAnswer": "首次登录后应立即修改初始密码，密码不少于十二位，并包含大写字母、小写字母、数字或特殊字符中的至少三类。",
+      "expectedEvidence": [
+        "立即修改初始密码",
+        "不得少于十二位",
+        "至少三类"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "立即修改初始密码",
+          "不得少于十二位",
+          "至少三类"
+        ],
+        "hits": [
+          {
+            "content": "员工首次登录统一身份平台后，应立即修改初始密码。密码长度不得少于十二位，并应包含大写字母、小写字母、数字或特殊字符中的至少三类。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8737816767614397
+          },
+          {
+            "content": "员工遗忘统一身份平台密码时，应通过统一身份平台的找回密码功能重置。无法自助重置的，可以提交IT服务台工单并完成人员身份核验。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5846482534360564
+          },
+          {
+            "content": "生产系统账号必须实名申请，禁止多人共用同一账号。账号权限应遵循最小权限原则，离职或岗位变更时应及时回收。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.10754834359557243
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.10584682701414509
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.09719549307162863
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "立即修改初始密码",
+          "不得少于十二位",
+          "至少三类"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】，统一身份平台初始密码的修改要求为：\n\n1.员工首次登录后应立即修改初始密码。\n2.修改后的密码长度不得少于十二位。\n3.密码必须包含大写字母、小写字母、数字或特殊字符中的至少三类。",
+        "sources": [
+          {
+            "content": "员工首次登录统一身份平台后，应立即修改初始密码。密码长度不得少于十二位，并应包含大写字母、小写字母、数字或特殊字符中的至少三类。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8513943211954149
+          },
+          {
+            "content": "员工遗忘统一身份平台密码时，应通过统一身份平台的找回密码功能重置。无法自助重置的，可以提交IT服务台工单并完成人员身份核验。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6031489498909772
+          }
+        ]
+      }
+    },
+    {
+      "id": "q016",
+      "question": "管理员可以把动态口令发给同事吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，管理员不得将验证码、动态口令或恢复码转发给他人。",
+      "expectedEvidence": [
+        "管理员不得将验证码、动态口令或恢复码转发给他人"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "管理员不得将验证码、动态口令或恢复码转发给他人"
+        ],
+        "hits": [
+          {
+            "content": "管理员账号必须开启多因素认证。管理员不得将验证码、动态口令或恢复码转发给他人。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.792449361044015
+          },
+          {
+            "content": "错误操作案例：员工将管理员动态口令截图发送到群聊，导致账号存在被冒用风险。该案例用于说明禁止共享验证码和动态口令。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.7584548035000587
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5968479685038256
+          },
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5478469544031054
+          },
+          {
+            "content": "生产系统账号必须实名申请，禁止多人共用同一账号。账号权限应遵循最小权限原则，离职或岗位变更时应及时回收。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.48765705757532535
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "管理员不得将验证码、动态口令或恢复码转发给他人"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】《账号与密码使用说明.txt》的规定：管理员不得将验证码、动态口令或恢复码转发给他人。因此，管理员不能把动态口令发给同事。",
+        "sources": [
+          {
+            "content": "管理员账号必须开启多因素认证。管理员不得将验证码、动态口令或恢复码转发给他人。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7771850883541956
+          },
+          {
+            "content": "错误操作案例：员工将管理员动态口令截图发送到群聊，导致账号存在被冒用风险。该案例用于说明禁止共享验证码和动态口令。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.7569467607737665
+          }
+        ]
+      }
+    },
+    {
+      "id": "q017",
+      "question": "首次使用VPN需要经过谁审批？",
+      "answerable": true,
+      "expectedAnswer": "首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+      "expectedEvidence": [
+        "提交远程办公权限申请",
+        "直属主管审批"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "提交远程办公权限申请",
+          "直属主管审批"
+        ],
+        "hits": [
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8656274371812109
+          },
+          {
+            "content": "已废止流程：VPN远程办公权限默认向全员开放，不需要申请。该流程已经废止，不得作为当前远程办公依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.6719414396102465
+          },
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5564081430759982
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.4228809869478619
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.40573770491803274
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "提交远程办公权限申请",
+          "直属主管审批"
+        ],
+        "missingEvidence": [],
+        "answer": "首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+        "sources": [
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.9266651348989519
+          },
+          {
+            "content": "已废止流程：VPN远程办公权限默认向全员开放，不需要申请。该流程已经废止，不得作为当前远程办公依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.6312861522866664
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5739369055130091
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5538679433401531
+          }
+        ]
+      }
+    },
+    {
+      "id": "q018",
+      "question": "VPN账号可以借给别人用吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，远程办公期间不得将VPN账号借给他人使用。",
+      "expectedEvidence": [
+        "不得将VPN账号借给他人使用"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "不得将VPN账号借给他人使用"
+        ],
+        "hits": [
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8071613019163675
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.676408093429894
+          },
+          {
+            "content": "错误操作案例：员工在公共电脑上保存VPN密码，离开后未退出登录。该案例用于说明远程办公不得在公共电脑保存公司账号和业务资料。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5807013177377581
+          },
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5080345053707142
+          },
+          {
+            "content": "错误操作案例：员工将管理员动态口令截图发送到群聊，导致账号存在被冒用风险。该案例用于说明禁止共享验证码和动态口令。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.34664679582712365
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [
+          "不得将VPN账号借给他人使用"
+        ],
+        "answer": "根据【知识库资料】，VPN账号不得借给他人使用。远程办公期间，禁止将VPN账号借给他人，也不得在公共电脑上保存公司账号、密码或业务资料。",
+        "sources": [
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8126589867004538
+          },
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5302968407410699
+          },
+          {
+            "content": "已废止流程：VPN远程办公权限默认向全员开放，不需要申请。该流程已经废止，不得作为当前远程办公依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.45378404040343756
+          }
+        ]
+      }
+    },
+    {
+      "id": "q019",
+      "question": "采购申请需要填写哪些信息？",
+      "answerable": true,
+      "expectedAnswer": "需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+      "expectedEvidence": [
+        "采购物品",
+        "数量",
+        "预算金额",
+        "用途说明",
+        "期望到货时间"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "采购物品",
+          "数量",
+          "预算金额",
+          "用途说明",
+          "期望到货时间"
+        ],
+        "hits": [
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8278889493864091
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5666626092394487
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.545438526612792
+          },
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5059574574641997
+          },
+          {
+            "content": "采购到货后，申请人应在三个工作日内完成验收确认。验收不通过的，应在采购系统中填写不通过原因并联系供应商处理。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.22368317537492818
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "采购物品",
+          "数量",
+          "预算金额",
+          "用途说明",
+          "期望到货时间"
+        ],
+        "missingEvidence": [],
+        "answer": "根据采购申请操作手册，采购申请需要填写以下信息：\n\n-采购物品\n-数量\n-预算金额\n-用途说明\n-期望到货时间",
+        "sources": [
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8278889493864091
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5426169022468424
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5416180563643709
+          },
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.4740431451995385
+          }
+        ]
+      }
+    },
+    {
+      "id": "q020",
+      "question": "单笔采购超过两万元需要谁复核？",
+      "answerable": true,
+      "expectedAnswer": "单笔采购预算超过两万元的，需要财务负责人复核。",
+      "expectedEvidence": [
+        "超过两万元",
+        "财务负责人复核"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "超过两万元",
+          "财务负责人复核"
+        ],
+        "hits": [
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8922816301676373
+          },
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5725101520354114
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.23888901770216062
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.21549519327652608
+          },
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.19825354678266371
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "超过两万元",
+          "财务负责人复核"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】，单笔采购预算超过两万元的，还需要财务负责人复核。",
+        "sources": [
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.9017719115110974
+          },
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5580960680157928
+          }
+        ]
+      }
+    },
+    {
+      "id": "q021",
+      "question": "采购到货后多久完成验收确认？",
+      "answerable": true,
+      "expectedAnswer": "采购到货后，申请人应在三个工作日内完成验收确认。",
+      "expectedEvidence": [
+        "到货后",
+        "三个工作日内完成验收确认"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "到货后",
+          "三个工作日内完成验收确认"
+        ],
+        "hits": [
+          {
+            "content": "采购到货后，申请人应在三个工作日内完成验收确认。验收不通过的，应在采购系统中填写不通过原因并联系供应商处理。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8670256810110124
+          },
+          {
+            "content": "错误操作案例：申请人采购到货后长期不验收，导致供应商结算延迟。该案例用于说明到货后三个工作日内完成验收确认。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7721603218911441
+          },
+          {
+            "content": "VPN连接失败时，应先检查网络、账号状态和多因素认证是否正常。连续三次认证失败后，账号可能被临时锁定，需要联系IT服务台处理。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.2427120584413582
+          },
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.21970109801873774
+          },
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.19027871823026338
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "到货后",
+          "三个工作日内完成验收确认"
+        ],
+        "missingEvidence": [],
+        "answer": "采购到货后，申请人应在三个工作日内完成验收确认。",
+        "sources": [
+          {
+            "content": "采购到货后，申请人应在三个工作日内完成验收确认。验收不通过的，应在采购系统中填写不通过原因并联系供应商处理。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8670256810110124
+          },
+          {
+            "content": "错误操作案例：申请人采购到货后长期不验收，导致供应商结算延迟。该案例用于说明到货后三个工作日内完成验收确认。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7437392242693455
+          }
+        ]
+      }
+    },
+    {
+      "id": "q022",
+      "question": "哪些合同必须经过法务复核？",
+      "answerable": true,
+      "expectedAnswer": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核。",
+      "expectedEvidence": [
+        "客户数据",
+        "源代码",
+        "商业秘密",
+        "排他性条款",
+        "法务复核"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "客户数据",
+          "源代码",
+          "商业秘密",
+          "排他性条款",
+          "法务复核"
+        ],
+        "hits": [
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.778957631690781
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6775392283496878
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5517388667007057
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.2905101407575407
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.2850724322794207
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "客户数据",
+          "源代码",
+          "商业秘密",
+          "排他性条款",
+          "法务复核"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【知识库资料】，涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+        "sources": [
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.7992964705392345
+          }
+        ]
+      }
+    },
+    {
+      "id": "q023",
+      "question": "合同盖章后多久上传扫描件并归档？",
+      "answerable": true,
+      "expectedAnswer": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。",
+      "expectedEvidence": [
+        "盖章完成后",
+        "五个工作日内上传扫描件并归档"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "盖章完成后",
+          "五个工作日内上传扫描件并归档"
+        ],
+        "hits": [
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.9137817745130571
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5373422881754141
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5122686363903513
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.504762110991981
+          },
+          {
+            "content": "采购到货后，申请人应在三个工作日内完成验收确认。验收不通过的，应在采购系统中填写不通过原因并联系供应商处理。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.15178012214809522
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "盖章完成后",
+          "五个工作日内上传扫描件并归档"
+        ],
+        "missingEvidence": [],
+        "answer": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+        "sources": [
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.9137817745130571
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.4934234492820739
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.47755049366252383
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.46960349566555376
+          }
+        ]
+      }
+    },
+    {
+      "id": "q024",
+      "question": "预约会议室需要填写哪些内容？",
+      "answerable": true,
+      "expectedAnswer": "需要填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+      "expectedEvidence": [
+        "会议主题",
+        "参会人数",
+        "开始时间",
+        "结束时间",
+        "所需设备"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "会议主题",
+          "参会人数",
+          "开始时间",
+          "结束时间",
+          "所需设备"
+        ],
+        "hits": [
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8088440728292791
+          },
+          {
+            "content": "超过二十人的会议应优先预约大会议室。需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5986237152730391
+          },
+          {
+            "content": "会议取消或时间变更时，预约人应及时释放会议室资源，避免影响其他团队使用。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5385887670083723
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.16191915717917507
+          },
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.15628740766157906
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "会议主题",
+          "参会人数",
+          "开始时间",
+          "结束时间",
+          "所需设备"
+        ],
+        "missingEvidence": [],
+        "answer": "预约会议室需通过办公门户提交申请，填写以下内容：会议主题、参会人数、开始时间、结束时间和所需设备。",
+        "sources": [
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8088440728292791
+          },
+          {
+            "content": "超过二十人的会议应优先预约大会议室。需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6304396896234712
+          },
+          {
+            "content": "会议取消或时间变更时，预约人应及时释放会议室资源，避免影响其他团队使用。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5464396903847677
+          }
+        ]
+      }
+    },
+    {
+      "id": "q025",
+      "question": "需要视频会议设备时要提前多久确认？",
+      "answerable": true,
+      "expectedAnswer": "需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+      "expectedEvidence": [
+        "至少提前一个工作日确认设备可用性"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "至少提前一个工作日确认设备可用性"
+        ],
+        "hits": [
+          {
+            "content": "超过二十人的会议应优先预约大会议室。需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8385888962667497
+          },
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6030036483106711
+          },
+          {
+            "content": "会议取消或时间变更时，预约人应及时释放会议室资源，避免影响其他团队使用。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.507292363929972
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.23565433818589768
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.20152942089524115
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "至少提前一个工作日确认设备可用性"
+        ],
+        "missingEvidence": [],
+        "answer": "需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+        "sources": [
+          {
+            "content": "超过二十人的会议应优先预约大会议室。需要视频会议设备的，应至少提前一个工作日确认设备可用性。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8385888962667497
+          },
+          {
+            "content": "员工预约会议室应通过办公门户提交申请，填写会议主题、参会人数、开始时间、结束时间和所需设备。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5900476955697139
+          },
+          {
+            "content": "会议取消或时间变更时，预约人应及时释放会议室资源，避免影响其他团队使用。",
+            "documentId": "4722c8ff06864b5594a52b0f4c9e2b9c",
+            "fileName": "会议室预约使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.4795009227859706
+          }
+        ]
+      }
+    },
+    {
+      "id": "q026",
+      "question": "知识库里的错误说法可以作为当前制度依据吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，错误说法、已废止流程和培训反例仅用于识别风险，不应作为当前制度或操作依据。",
+      "expectedEvidence": [
+        "错误说法、已废止流程和培训反例",
+        "不应作为当前制度或操作依据"
+      ],
+      "search": {
+        "hitAt1": true,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 1.0,
+        "matchedRank": 1,
+        "matchedEvidence": [
+          "错误说法、已废止流程和培训反例",
+          "不应作为当前制度或操作依据"
+        ],
+        "hits": [
+          {
+            "content": "知识库中的错误说法、已废止流程和培训反例仅用于识别风险，不应作为当前制度或操作依据。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8043646511158657
+          },
+          {
+            "content": "当知识库回答没有找到明确依据时，用户应联系对应制度负责人或系统管理员确认，不应自行编造流程。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.683794576712481
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.36878017180711925
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.3651958198096235
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.3648638853351098
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "错误说法、已废止流程和培训反例",
+          "不应作为当前制度或操作依据"
+        ],
+        "missingEvidence": [],
+        "answer": "不能。根据知识库资料中的说明，知识库中的错误说法、已废止流程和培训反例仅用于识别风险，不应作为当前制度或操作依据。",
+        "sources": [
+          {
+            "content": "知识库中的错误说法、已废止流程和培训反例仅用于识别风险，不应作为当前制度或操作依据。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7838944699199041
+          },
+          {
+            "content": "当知识库回答没有找到明确依据时，用户应联系对应制度负责人或系统管理员确认，不应自行编造流程。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6896375952491206
+          }
+        ]
+      }
+    },
+    {
+      "id": "q027",
+      "question": "年假可以当天口头申请吗？",
+      "answerable": true,
+      "expectedAnswer": "不可以，年假需要至少提前三个工作日提交申请，并经过直属主管审批。",
+      "expectedEvidence": [
+        "年假需要至少提前三个工作日提交申请",
+        "直属主管审批"
+      ],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 0.5,
+        "matchedRank": 2,
+        "matchedEvidence": [
+          "年假需要至少提前三个工作日提交申请",
+          "直属主管审批"
+        ],
+        "hits": [
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8921064919046781
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6881147568401821
+          },
+          {
+            "content": "迟到超过三十分钟且未提前报备的，按半天事假处理。因公共交通大面积延误导致迟到的，可提交官方延误证明申请豁免。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.5375739519790405
+          },
+          {
+            "content": "向知识库提问时，建议说明业务场景、涉及系统和需要判断的问题。例如，可以询问年假申请提前多久、差旅住宿费需要哪些材料、VPN权限如何申请。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5086507065999555
+          },
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.5005963733408523
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "年假需要至少提前三个工作日提交申请",
+          "直属主管审批"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【员工考勤与请假制度.txt】，员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。因此，年假不可以当天口头申请。",
+        "sources": [
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.8951089566759488
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6477308059023129
+          },
+          {
+            "content": "员工申请病假需要在返岗后三个工作日内提交医院诊断证明或病历材料。无法提供有效证明的，病假可按事假处理。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.4811559896058578
+          }
+        ]
+      }
+    },
+    {
+      "id": "q028",
+      "question": "普通通勤费用是不是都可以报销？",
+      "answerable": true,
+      "expectedAnswer": "不是，普通通勤费用不属于报销范围。",
+      "expectedEvidence": [
+        "普通通勤费用不属于报销范围"
+      ],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 0.5,
+        "matchedRank": 2,
+        "matchedEvidence": [
+          "普通通勤费用不属于报销范围"
+        ],
+        "hits": [
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8827471484241507
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8191186840212094
+          },
+          {
+            "content": "已废止流程：员工可通过邮件直接向财务提交报销，不需要在系统中填写报销单。该流程已经废止，不得作为当前报销依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.24737994198487137
+          },
+          {
+            "content": "差旅住宿费报销需要提供酒店发票、入住水单和出差审批单。缺少出差审批单的，财务可以退回报销申请。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2463703931495177
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.21915255071367823
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": null,
+        "answerContainsEvidence": true,
+        "matchedEvidence": [
+          "普通通勤费用不属于报销范围"
+        ],
+        "missingEvidence": [],
+        "answer": "根据【费用报销制度.txt】的规定，普通通勤费用不属于报销范围。因此，普通通勤费用不可以报销。",
+        "sources": [
+          {
+            "content": "错误说法：普通上下班通勤费用都可以按市内交通费报销。正确做法应以费用报销制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8827471484241507
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.7870803451259344
+          }
+        ]
+      }
+    },
+    {
+      "id": "q029",
+      "question": "采购预算低于三万元是不是不需要审批？",
+      "answerable": true,
+      "expectedAnswer": "不是。单笔采购预算超过五千元需要部门负责人审批，超过两万元还需要财务负责人复核。",
+      "expectedEvidence": [
+        "超过五千元",
+        "部门负责人审批",
+        "超过两万元",
+        "财务负责人复核"
+      ],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 0.5,
+        "matchedRank": 2,
+        "matchedEvidence": [
+          "超过五千元",
+          "部门负责人审批",
+          "超过两万元",
+          "财务负责人复核"
+        ],
+        "hits": [
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8781695156779685
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8312984728597934
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.6608229733656636
+          },
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5356424968337299
+          },
+          {
+            "content": "市内交通费单次超过二百元的，需要在报销单中说明事由，并上传行程凭证。普通通勤费用不属于报销范围。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.25692166473875927
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [
+          "超过五千元",
+          "部门负责人审批",
+          "超过两万元",
+          "财务负责人复核"
+        ],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": [
+          {
+            "content": "已废止流程：采购预算低于三万元时不需要任何审批。该流程已经废止，不得作为当前采购依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8759422177122647
+          },
+          {
+            "content": "单笔采购预算超过五千元的，需要部门负责人审批。单笔采购预算超过两万元的，还需要财务负责人复核。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.8312984728597934
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.656733110942707
+          },
+          {
+            "content": "采购申请应在采购系统中发起，申请人需要填写采购物品、数量、预算金额、用途说明和期望到货时间。",
+            "documentId": "5555e15008864a758a86e73eaee5add8",
+            "fileName": "采购申请操作手册.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.5412431552089791
+          }
+        ]
+      }
+    },
+    {
+      "id": "q030",
+      "question": "合同能不能先盖章后补审批？",
+      "answerable": true,
+      "expectedAnswer": "不能，合同审批应通过合同管理系统发起，涉及特定风险条款的合同必须经过法务复核后才能提交盖章。",
+      "expectedEvidence": [
+        "合同审批应通过合同管理系统发起",
+        "法务复核后才能提交盖章"
+      ],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": true,
+        "hitAt5": true,
+        "reciprocalRank": 0.3333333333333333,
+        "matchedRank": 3,
+        "matchedEvidence": [
+          "法务复核后才能提交盖章"
+        ],
+        "hits": [
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8665012305788419
+          },
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7196692983086969
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6792442220207944
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6297104139990263
+          },
+          {
+            "content": "知识库中的错误说法、已废止流程和培训反例仅用于识别风险，不应作为当前制度或操作依据。",
+            "documentId": "a7edd02ac305438a959d26a29122aa2d",
+            "fileName": "知识库提问使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.24719589018267338
+          }
+        ]
+      },
+      "chat": {
+        "correct": false,
+        "refusalCorrect": null,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [
+          "合同审批应通过合同管理系统发起",
+          "法务复核后才能提交盖章"
+        ],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": [
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.8455401353747929
+          },
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.7310660048368648
+          },
+          {
+            "content": "涉及客户数据、源代码、商业秘密或排他性条款的合同，必须经过法务复核后才能提交盖章。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.6649289518324053
+          },
+          {
+            "content": "合同审批应通过合同管理系统发起。申请人需要上传合同正文、合同附件、供应商信息和业务背景说明。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.6018621279277497
+          }
+        ]
+      }
+    },
+    {
+      "id": "q031",
+      "question": "公司有没有午餐补贴标准？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.35573770491803275
+          },
+          {
+            "content": "员工远程访问公司内网时，应使用公司批准的VPN客户端。首次使用VPN需要提交远程办公权限申请，并经过直属主管审批。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2599029818862091
+          },
+          {
+            "content": "合同盖章完成后，申请人应在五个工作日内上传扫描件并归档。纸质原件应按公司档案管理要求移交。",
+            "documentId": "d05a01155f574fd2b91a69dfc91bb363",
+            "fileName": "合同审批使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.2561558104751003
+          },
+          {
+            "content": "错误说法：客户数据导出后可以永久保存，不需要记录接收人。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 3,
+            "score": 0.21975099175139406
+          },
+          {
+            "content": "错误操作案例：员工在公共电脑上保存VPN密码，离开后未退出登录。该案例用于说明远程办公不得在公共电脑保存公司账号和业务资料。",
+            "documentId": "cb0001f05e1c4ababdaf91e81592068c",
+            "fileName": "错误操作案例-仅供培训反例.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.20526803831855428
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": []
+      }
+    },
+    {
+      "id": "q032",
+      "question": "办公电脑几年可以更换一次？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "员工遇到电脑、网络、打印机或办公软件故障时，应在IT服务台提交工单。工单必须填写故障现象、影响范围、联系方式和期望处理时间。",
+            "documentId": "383fa01f1faf405b9fa92c4363250156",
+            "fileName": "IT服务台使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.35573770491803275
+          },
+          {
+            "content": "远程办公期间不得将VPN账号借给他人使用，也不得在公共电脑上保存公司账号、密码或业务资料。",
+            "documentId": "65199028620a4efe8509581be51e4209",
+            "fileName": "VPN远程办公使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.35178362208768743
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.3389929274930963
+          },
+          {
+            "content": "错误说法：生产系统账号可以由项目组多人共用，只要组长知道密码即可。正确做法应以信息安全管理规范为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.3304582546480799
+          },
+          {
+            "content": "业务招待费报销需要注明客户名称、招待事由、参与人员和审批人。单次超过一千元的，必须提前获得部门负责人审批。",
+            "documentId": "94312c9516af4e56b0e868ff2784850a",
+            "fileName": "费用报销制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.3169516144761223
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": []
+      }
+    },
+    {
+      "id": "q033",
+      "question": "外地员工租房补贴是多少？",
+      "answerable": false,
+      "expectedAnswer": "当前知识库中没有找到明确依据。",
+      "expectedEvidence": [],
+      "search": {
+        "hitAt1": false,
+        "hitAt3": false,
+        "hitAt5": false,
+        "reciprocalRank": 0.0,
+        "matchedRank": null,
+        "matchedEvidence": [],
+        "hits": [
+          {
+            "content": "员工不得通过个人邮箱、网盘或即时通讯工具外发公司敏感资料。确需对外发送的，应使用公司批准的加密通道并保留审批记录。",
+            "documentId": "90c6b2186c6941beaea3cb7d179e2596",
+            "fileName": "信息安全管理规范.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.33427192031829117
+          },
+          {
+            "content": "已废止流程：合同金额低于十万元时可以先盖章后补审批。该流程已经废止，不得作为当前合同审批依据。",
+            "documentId": "ab40a4f860244742a8db8590adb6dd2c",
+            "fileName": "已废止流程说明-不得作为当前依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 2,
+            "score": 0.3207377049180328
+          },
+          {
+            "content": "员工遗忘统一身份平台密码时，应通过统一身份平台的找回密码功能重置。无法自助重置的，可以提交IT服务台工单并完成人员身份核验。",
+            "documentId": "3fa1777f24ff4380be9c13e309ea24d2",
+            "fileName": "账号与密码使用说明.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 1,
+            "score": 0.29478157361632285
+          },
+          {
+            "content": "错误说法：年假可以当天口头申请，不需要主管审批。正确做法应以员工考勤与请假制度为准，本条只是错误示例，不得作为制度依据。",
+            "documentId": "5d9936cd28874ef7a3eefada2f6843f2",
+            "fileName": "常见错误说法汇总-不得作为制度依据.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2803688087693323
+          },
+          {
+            "content": "员工申请年假需要至少提前三个工作日提交申请，并经过直属主管审批。连续年假超过五个工作日的，还需要部门负责人复核。",
+            "documentId": "bcf7dc5fb52545c6908cacdf8947f749",
+            "fileName": "员工考勤与请假制度.txt",
+            "departmentId": "eval",
+            "moduleCode": "policy",
+            "chunkIndex": 0,
+            "score": 0.2623633090213404
+          }
+        ]
+      },
+      "chat": {
+        "correct": true,
+        "refusalCorrect": true,
+        "answerContainsEvidence": false,
+        "matchedEvidence": [],
+        "missingEvidence": [],
+        "answer": "当前知识库中没有找到明确依据。",
+        "sources": []
+      }
+    }
+  ],
+  "summary": {
+    "questionCount": 33,
+    "search": {
+      "evaluatedCount": 33,
+      "hitAt1": 0.6666666666666666,
+      "hitAt3": 0.8181818181818182,
+      "hitAt5": 0.8181818181818182,
+      "mrr": 0.7373737373737373
+    },
+    "chat": {
+      "evaluatedCount": 33,
+      "accuracy": 0.7575757575757576,
+      "answerableAccuracy": 0.7037037037037037,
+      "refusalAccuracy": 1.0
+    }
+  }
+}

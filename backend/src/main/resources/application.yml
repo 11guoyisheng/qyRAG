@@ -1,0 +1,95 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/rag_demo?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:abc123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+  ai:
+    openai:
+      api-key: 
+      base-url: 
+      chat:
+        options:
+          model: deepseek-v4-flash
+          temperature: 0.2
+      embedding:
+
+        options:
+
+          model: text-embedding-v4
+          dimensions: 1536
+        base-url: 
+        embeddings-path: 
+        api-key: 
+      milvus:
+        initialize-schema: true
+        collection-name: rag_document_chunk
+        database-name: default
+        embedding-dimension: 1536
+        index-type: IVF_FLAT
+        metric-type: COSINE
+        index-parameters: '{"nlist":1024}'
+        client:
+          host: 
+          port: 19530
+          username: root
+          password: milvus
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+rag:
+  upload-dir: ./data/rag-files
+  answer:
+    min-vector-score: 0.62
+  query-optimization:
+    enabled: true
+    query-rewrite:
+      enabled: true
+    hyde:
+      enabled: true
+      max-chars: 900
+    multi-query:
+      enabled: true
+      max-sub-queries: 4
+  chunking:
+    strategy: cosine
+    cosine:
+      similarity-threshold: 0.72
+      min-chunk-chars: 300
+      max-chunk-chars: 1800
+      max-candidate-chars: 500
+  retrieval:
+    hybrid:
+      enabled: true
+    keyword:
+      enabled: true
+    rerank:
+      enabled: true
+      weights:
+        vector: 0.50
+        keyword: 0.30
+        lexical: 0.15
+        exact-phrase: 0.05
+    vector:
+      similarity-threshold: 0.62
+    candidate-multiplier: 4
+    rrf-k: 60
+    weights:
+      vector: 0.65
+      keyword: 0.35
+  context:
+    max-chunks: 4
+    post-processing:
+      enabled: true
+      relevance:
+        similarity-threshold: 0.62
+      deduplication:
+        similarity-threshold: 0.92

@@ -1,0 +1,48 @@
+# 下载镜像
+docker pull minio/minio:RELEASE.2025-04-22T22-12-26Z
+
+#查看镜像
+docker images
+
+2、创建目录
+
+一个用来存放配置，一个用来存储上传文件的目录
+
+启动前需要先创建Minio外部挂载的配置文件（ /opt/minio/config）,和存储上传文件的目录（ /opt/minio/data）
+
+
+
+mkdir -p /opt/minio/config
+
+mkdir -p /opt/minio/data
+
+3 创建Minio容器并运行
+
+
+
+
+
+
+
+docker run -d \
+  --name minio \
+  -p 9000:9000 -p 9001:9001 \
+  -e "MINIO_ROOT_USER=admin" \
+  -e "MINIO_ROOT_PASSWORD=admin123" \
+  -v /data/minio/data:/data \
+  -v /data/minio/config:/root/.minio \
+  minio/minio:RELEASE.2025-04-22T22-12-26Z \
+  server /data --console-address ":9001" --address ":9000"
+
+
+
+
+4、访问操作
+访问：http://你的IP地址:9001/login 用户名：密码 admin：admin123
+
+http://192.168.12.101:9001/login
+
+保存镜像
+docker save -o minio-image.tar minio/minio:RELEASE.2025-04-22T22-12-26Z
+加载镜像
+docker load -i minio-image.tar

@@ -1,0 +1,340 @@
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+/**
+ * 流程控制系统 - 实现主流程和取消流程
+ */
+public class WorkflowControl {
+    
+    // 取消标志
+    private final AtomicBoolean cancelled = new AtomicBoolean(false);
+    
+    // ==================== 同步实现 ====================
+    
+    /**
+     * 同步方式执行完整流程
+     */
+    public void executeSync() throws InterruptedException {
+        System.out.println("=== 开始执行同步流程 ===\n");
+        
+        // 1. 请求流程
+        System.out.println("步骤1: 请求流程");
+        
+        // 2. 任务A（读操作）
+        taskA();
+        
+        // 3. 并行执行任务C和任务B
+        Object lock = new Object();
+        final boolean[] taskCCompleted = {false};
+        final boolean[] branchCompleted = {false};
+        
+        // 线程1: 执行任务C → 任务H
+        Thread thread1 = new Thread(() -> {
+            try {
+                taskC();
+                taskH();
+                
+                synchronized (lock) {
+                    taskCCompleted[0] = true;
+                    lock.notifyAll();
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+        
+        // 线程2: 执行任务B及后续分支
+        Thread thread2 = new Thread(() -> {
+            try {
+                boolean bResult = taskB();
+                
+                if (bResult) {
+                    System.out.println("B返回成功: Y - 并行执行");
+                    // 并行执行任务X和Y
+                    CountDownLatch latch = new CountDownLatch(2);
+                    
+                    new Thread(() -> {
+                        try {
+                            taskX();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        } finally {
+                            latch.countDown();
+                        }
+                    }).start();
+                    
+                    new Thread(() -> {
+                        try {
+                            taskY();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        } finally {
+                            latch.countDown();
+                        }
+                    }).start();
+                    
+                    latch.await();
+                } else {
+                    System.out.println("B返回成功: N - 执行任务P");
+                    taskP();
+                }
+                
+                synchronized (lock) {
+                    branchCompleted[0] = true;
+                    lock.notifyAll();
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+        
+        thread1.start();
+        thread2.start();
+        
+        // 等待两个分支都完成
+        synchronized (lock) {
+            while (!taskCCompleted[0] || !branchCompleted[0]) {
+                lock.wait();
+            }
+        }
+        
+        // 检查是否被取消
+        if (cancelled.get()) {
+            System.out.println("\n流程已取消，直接结束");
+            return;
+        }
+        
+        // 4. 任务W（写操作）
+        taskW();
+        
+        // 5. 结束
+        System.out.println("步骤: 全部结束\n");
+        System.out.println("=== 同步流程执行完成 ===");
+    }
+    
+    // ==================== 异步实现 ====================
+    
+    /**
+     * 异步方式执行完整流程
+     */
+    public CompletableFuture<Void> executeAsync() {
+        System.out.println("=== 开始执行异步流程 ===\n");
+        
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤1: 请求流程");
+        })
+        // 任务A
+        .thenCompose(v -> taskAAsync())
+        
+        // 并行执行任务C和任务B分支
+        .thenCompose(v -> {
+            // 分支1: 任务C → 任务H
+            CompletableFuture<Void> branch1 = taskCAsync()
+                .thenCompose(v2 -> taskHAsync());
+            
+            // 分支2: 任务B → 判断 → 任务X/Y 或 任务P
+            CompletableFuture<Void> branch2 = taskBAsync()
+                .thenCompose(bResult -> {
+                    if (bResult) {
+                        System.out.println("B返回成功: Y - 并行执行");
+                        // 并行执行任务X和Y
+                        CompletableFuture<Void> taskXFuture = taskXAsync();
+                        CompletableFuture<Void> taskYFuture = taskYAsync();
+                        return CompletableFuture.allOf(taskXFuture, taskYFuture);
+                    } else {
+                        System.out.println("B返回成功: N - 执行任务P");
+                        return taskPAsync();
+                    }
+                });
+            
+            // 等待两个分支都完成
+            return CompletableFuture.allOf(branch1, branch2);
+        })
+        
+        // 检查取消状态
+        .thenCompose(v -> {
+            if (cancelled.get()) {
+                System.out.println("\n流程已取消，直接结束");
+                return CompletableFuture.completedFuture(null);
+            }
+            return taskWAsync();
+        })
+        
+        // 结束
+        .thenRun(() -> {
+            if (!cancelled.get()) {
+                System.out.println("步骤: 全部结束\n");
+            }
+            System.out.println("=== 异步流程执行完成 ===");
+        })
+        
+        // 异常处理
+        .exceptionally(ex -> {
+            System.err.println("流程执行异常: " + ex.getMessage());
+            ex.printStackTrace();
+            return null;
+        });
+    }
+    
+    // ==================== 任务实现（同步版本）====================
+    
+    private void taskA() throws InterruptedException {
+        System.out.println("步骤2: 执行任务A（读操作）");
+        Thread.sleep(500);
+    }
+    
+    private void taskC() throws InterruptedException {
+        System.out.println("步骤3: 执行任务C（读操作）[并行分支1]");
+        Thread.sleep(800);
+    }
+    
+    private void taskH() throws InterruptedException {
+        System.out.println("步骤4: 执行任务H（写操作）[并行分支1]");
+        Thread.sleep(600);
+        // 这里可以触发取消
+        // cancelled.set(true);
+    }
+    
+    private boolean taskB() throws InterruptedException {
+        System.out.println("步骤3: 执行任务B（读操作）[并行分支2]");
+        Thread.sleep(700);
+        // 模拟返回结果，70%成功
+        return Math.random() > 0.3;
+    }
+    
+    private void taskX() throws InterruptedException {
+        System.out.println("步骤4: 执行任务X（读操作）[分支2-成功]");
+        Thread.sleep(500);
+    }
+    
+    private void taskY() throws InterruptedException {
+        System.out.println("步骤4: 执行任务Y（读操作）[分支2-成功]");
+        Thread.sleep(500);
+    }
+    
+    private void taskP() throws InterruptedException {
+        System.out.println("步骤4: 执行任务P（读操作）[分支2-失败]");
+        Thread.sleep(600);
+    }
+    
+    private void taskW() throws InterruptedException {
+        System.out.println("步骤5: 任务一结束，执行任务W（写操作）");
+        Thread.sleep(500);
+    }
+    
+    // ==================== 任务实现（异步版本）====================
+    
+    private CompletableFuture<Void> taskAAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤2: 执行任务A（读操作）");
+            sleep(500);
+        });
+    }
+    
+    private CompletableFuture<Void> taskCAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤3: 执行任务C（读操作）[并行分支1]");
+            sleep(800);
+        });
+    }
+    
+    private CompletableFuture<Void> taskHAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤4: 执行任务H（写操作）[并行分支1]");
+            sleep(600);
+            // 这里可以触发取消
+            // cancelled.set(true);
+        });
+    }
+    
+    private CompletableFuture<Boolean> taskBAsync() {
+        return CompletableFuture.supplyAsync(() -> {
+            System.out.println("步骤3: 执行任务B（读操作）[并行分支2]");
+            sleep(700);
+            return Math.random() > 0.3;
+        });
+    }
+    
+    private CompletableFuture<Void> taskXAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤4: 执行任务X（读操作）[分支2-成功]");
+            sleep(500);
+        });
+    }
+    
+    private CompletableFuture<Void> taskYAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤4: 执行任务Y（读操作）[分支2-成功]");
+            sleep(500);
+        });
+    }
+    
+    private CompletableFuture<Void> taskPAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤4: 执行任务P（读操作）[分支2-失败]");
+            sleep(600);
+        });
+    }
+    
+    private CompletableFuture<Void> taskWAsync() {
+        return CompletableFuture.runAsync(() -> {
+            System.out.println("步骤5: 任务一结束，执行任务W（写操作）");
+            sleep(500);
+        });
+    }
+    
+    // ==================== 工具方法 ====================
+    
+    private void sleep(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+    
+    /**
+     * 触发取消流程
+     */
+    public void cancel() {
+        System.out.println("\n>>> 触发取消流程 <<<");
+        cancelled.set(true);
+    }
+    
+    /**
+     * 重置取消状态
+     */
+    public void reset() {
+        cancelled.set(false);
+    }
+    
+    // ==================== 测试主方法 ====================
+    
+    public static void main(String[] args) throws Exception {
+        WorkflowControl workflow = new WorkflowControl();
+        
+        // 测试1: 同步执行
+        System.out.println("【测试1: 同步执行】\n");
+        workflow.executeSync();
+        
+        System.out.println("\n" + "=".repeat(60) + "\n");
+        
+        // 测试2: 异步执行
+        System.out.println("【测试2: 异步执行】\n");
+        workflow.reset();
+        workflow.executeAsync().get(); // 等待完成
+        
+        System.out.println("\n" + "=".repeat(60) + "\n");
+        
+        // 测试3: 带取消的异步执行
+        System.out.println("【测试3: 带取消的异步执行】\n");
+        workflow.reset();
+        CompletableFuture<Void> future = workflow.executeAsync();
+        
+        // 模拟在执行过程中触发取消
+        Thread.sleep(2000);
+        workflow.cancel();
+        
+        future.get(); // 等待完成
+    }
+}

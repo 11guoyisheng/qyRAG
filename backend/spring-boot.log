@@ -1,0 +1,26 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.example:spring-ai-milvus-rag >------------------
+[INFO] Building spring-ai-milvus-rag 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ spring-ai-milvus-rag >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-ai-milvus-rag ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ spring-ai-milvus-rag ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-ai-milvus-rag ---
+[INFO] skip non existing resourceDirectory D:\KataGo\zhongkequanan\spring-ai-milvus-rag-demo\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ spring-ai-milvus-rag ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ spring-ai-milvus-rag <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ spring-ai-milvus-rag ---
+[INFO] Attaching agents: []
