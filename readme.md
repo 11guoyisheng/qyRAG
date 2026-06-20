@@ -10,11 +10,11 @@
 
 用户端
 
-![8d68a0345ff87bc70daa4e607e5b1729](D:\KataGo\zhongkequanan\a2\spring-ai-milvus-rag-demo\images\8d68a0345ff87bc70daa4e607e5b1729.png)
+![8d68a0345ff87bc70daa4e607e5b1729](.\images\8d68a0345ff87bc70daa4e607e5b1729.png)
 
 管理端
 
-![b7ed8d4883026811d49b04de0d320e7a](D:\KataGo\zhongkequanan\a2\spring-ai-milvus-rag-demo\images\b7ed8d4883026811d49b04de0d320e7a.png)
+![b7ed8d4883026811d49b04de0d320e7a](.\images\b7ed8d4883026811d49b04de0d320e7a.png)
 
 测试
 
@@ -38,4 +38,4 @@ python rag_eval.py --upload --run-search --run-chat
 
 测试结果
 
-![985d9cb861e0bdd3ffd6ac6a717d60c3](D:\KataGo\zhongkequanan\a2\spring-ai-milvus-rag-demo\images\985d9cb861e0bdd3ffd6ac6a717d60c3.png)
+![985d9cb861e0bdd3ffd6ac6a717d60c3](.\images\985d9cb861e0bdd3ffd6ac6a717d60c3.png)
